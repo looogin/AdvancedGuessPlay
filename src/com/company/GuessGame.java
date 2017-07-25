@@ -16,10 +16,8 @@ public class GuessGame {
 
     public GuessGame() {
         createPlayer(20);
-        createPlayer(20);
-        createPlayer(20);
-        createPlayer(20);
-        createPlayer(20);
+        createPlayer(100);
+
 
     }
 

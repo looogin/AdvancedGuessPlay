@@ -11,7 +11,7 @@ public class SmartPlayer implements Player {
 
     public SmartPlayer(int maxrange, String name) {
       this.name =name;
-      this.maxrange = maxrange/(int)(Math.random()*3+1);
+      this.maxrange = maxrange/2;
       number1 = this.maxrange;
       number2 = this.maxrange;
       score=0;
