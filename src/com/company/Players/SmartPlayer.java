@@ -18,8 +18,8 @@ public class SmartPlayer implements Player {
 
     @Override
     public void guess() {
-        if(number1 > 0)number1=maxrange/2;
-        if(number2 < maxrange)number2=maxrange/2;
+        if(number1 < 0)number1=maxrange/2;
+        if(number2 > maxrange)number2=maxrange/2;
         if (test) {
             --number1;
             number = number1;
@@ -39,7 +39,7 @@ public class SmartPlayer implements Player {
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
 
