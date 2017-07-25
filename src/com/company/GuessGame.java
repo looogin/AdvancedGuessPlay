@@ -1,28 +1,25 @@
 package com.company;
 
 import com.company.Players.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GuessGame {
-    private SmartPlayer p1;
-    private NormalPlayer p2;
-    private DummyPlayer p3;
-    private int guessp1;
-    private int guessp2;
-    private int guessp3 ;
     private int i =0;
+    private int numbersofplayer = 1;
     private int maxNumber=10;
     private int winp1;
     private int winp2;
     private int winp3;
+    List<Player> players = new ArrayList<>();
 
     public GuessGame(){
-        createPlayer(18);
-        createPlayer(50);
-        createPlayer(120);
+        createPlayer(20);
+
     }
 
     public void startGame() {
-        while (i<10) {
+        /*while (i<10) {
             boolean p1isRight = false;
             boolean p2isRight = false;
             boolean p3isRight = false;
@@ -72,7 +69,7 @@ public class GuessGame {
             }
 
         }
-        System.out.println(winp1 +" " + winp2 +" " + winp3);
+        System.out.println(winp1 +" " + winp2 +" " + winp3);*/
     }
 
     private int intargetNumber() {
@@ -80,9 +77,10 @@ public class GuessGame {
     }
 
     private void createPlayer(int IQ) {
-        if (IQ<0||IQ<20) p3 = new DummyPlayer(maxNumber);
-        if (IQ<21||IQ<80) p2 = new NormalPlayer(maxNumber);
-        if (IQ<81||IQ<200) p1 = new SmartPlayer(maxNumber);
+        if (IQ<0||IQ<=20)   players.add(new DummyPlayer(maxNumber,"Игрок" + numbersofplayer));
+        if (IQ<21||IQ<=80)  players.add( new NormalPlayer(maxNumber,"Игрок" + numbersofplayer));
+        if (IQ<81||IQ<=200) players.add( new SmartPlayer(maxNumber,"Игрок" + numbersofplayer ));
+        ++numbersofplayer;
     }
 
 }

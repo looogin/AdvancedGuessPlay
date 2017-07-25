@@ -1,10 +1,13 @@
 package com.company.Players;
 
 public class DummyPlayer implements Player {
+
+    private final String name;
     private int number;
     private int maxrange;
 
-    public DummyPlayer(int maxrange) {
+    public DummyPlayer(int maxrange, String name) {
+        this.name = name;
         this.maxrange = maxrange;
     }
 
@@ -18,5 +21,10 @@ public class DummyPlayer implements Player {
     public int getNumber() {
 
         return number ;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }
