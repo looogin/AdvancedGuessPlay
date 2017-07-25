@@ -5,10 +5,12 @@ public class DummyPlayer implements Player {
     private final String name;
     private int number;
     private int maxrange;
+    private int score;
 
     public DummyPlayer(int maxrange, String name) {
         this.name = name;
         this.maxrange = maxrange;
+        score = 0;
     }
 
     @Override
@@ -26,5 +28,14 @@ public class DummyPlayer implements Player {
     @Override
     public String getName() {
         return name;
+    }
+
+    public  int  getScore() {
+        return score;
+    }
+
+    @Override
+    public void addScorePoint() {
+        ++score;
     }
 }

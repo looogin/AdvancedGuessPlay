@@ -6,4 +6,6 @@ public interface Player {
     void guess();
     int getNumber();
     String getName();
+    int getScore();
+    void addScorePoint();
 }

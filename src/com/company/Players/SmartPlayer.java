@@ -7,19 +7,21 @@ public class SmartPlayer implements Player {
     private int number1;
     private int number2;
     private boolean test = false;
+    private int score;
 
     public SmartPlayer(int maxrange, String name) {
       this.name =name;
-      this.maxrange = maxrange;
-      number1 = maxrange/2;
-      number2 = maxrange/2;
+      this.maxrange = maxrange/(int)(Math.random()*3+1);
+      number1 = this.maxrange;
+      number2 = this.maxrange;
+      score=0;
 
     }
 
     @Override
     public void guess() {
-        if(number1 < 0)number1=maxrange/2;
-        if(number2 > maxrange)number2=maxrange/2;
+        if(number1 < 0)number1=maxrange;
+        if(number2 > maxrange)number2=maxrange;
         if (test) {
             --number1;
             number = number1;
@@ -40,6 +42,16 @@ public class SmartPlayer implements Player {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int getScore() {
+        return score;
+}
+
+    @Override
+    public void addScorePoint() {
+     ++score;
     }
 
 
