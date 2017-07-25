@@ -19,6 +19,7 @@ public class GuessGame {
     }
 
     public void startGame() {
+        System.out.println(players.get(0).getName());
         /*while (i<10) {
             boolean p1isRight = false;
             boolean p2isRight = false;
@@ -77,9 +78,9 @@ public class GuessGame {
     }
 
     private void createPlayer(int IQ) {
-        if (IQ<0||IQ<=20)   players.add(new DummyPlayer(maxNumber,"Игрок" + numbersofplayer));
-        if (IQ<21||IQ<=80)  players.add( new NormalPlayer(maxNumber,"Игрок" + numbersofplayer));
-        if (IQ<81||IQ<=200) players.add( new SmartPlayer(maxNumber,"Игрок" + numbersofplayer ));
+        if (IQ>0&IQ<=20)   players.add(new DummyPlayer(maxNumber,"Игрок_" + numbersofplayer));
+        if (IQ>21&IQ<=80)  players.add( new NormalPlayer(maxNumber,"Игрок_" + numbersofplayer));
+        if (IQ>81&IQ<=200) players.add( new SmartPlayer(maxNumber,"Игрок_" + numbersofplayer ));
         ++numbersofplayer;
     }
 
