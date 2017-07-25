@@ -16,7 +16,7 @@ public class DummyPlayer implements Player {
     @Override
     public void guess() {
 
-        number = (int) ((Math.random() * maxrange)+(Math.random() /2 * maxrange));
+        number = (int) (((Math.random() * maxrange)+(Math.random() /2 * maxrange))+Math.random());
     }
 
     @Override

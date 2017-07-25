@@ -10,16 +10,16 @@ import java.util.List;
 public class GuessGame {
     private int i = 0;
     private int numbersofplayer = 1;
-    private int maxNumber = 20;
+    private int maxNumber = 30;
     private List<Player> players = new ArrayList<>();
     private String winPlayer;
 
     public GuessGame() {
         createPlayer(20);
-        createPlayer(50);
-        createPlayer(120);
-        createPlayer(100);
-        createPlayer(40);
+        createPlayer(20);
+        createPlayer(20);
+        createPlayer(20);
+        createPlayer(20);
 
     }
 
@@ -56,10 +56,10 @@ public class GuessGame {
                 winPlayer=p.getName();
                 last=p.getScore();
             }
-            System.out.print(" "+p.getName()+" "+p.getScore());
+            System.out.print(" "+p.getName()+": "+p.getScore()+"|");
         }
         System.out.println();
-        System.out.println("ПОБЕДИЛ "+winPlayer +"!!!!!!!!!!");
+        System.out.println("ПОБЕДИЛ "+winPlayer +" !!!!!!!!!!");
 
     }
 
