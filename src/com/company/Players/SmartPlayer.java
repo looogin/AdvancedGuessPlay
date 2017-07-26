@@ -2,7 +2,6 @@ package com.company.Players;
 
 public class SmartPlayer extends Player {
     private final int maxrange;
-    private final String name;
     private int number;
     private int number1;
     private int number2;
@@ -10,25 +9,24 @@ public class SmartPlayer extends Player {
     private int score;
 
     public SmartPlayer(int maxrange, String name) {
-      super(maxrange,name);
-      this.name =name;
-      this.maxrange = maxrange/2;
-      number1 = this.maxrange;
-      number2 = this.maxrange;
-      score=0;
+        super(maxrange, name);
+        this.maxrange = maxrange / 2;
+        number1 = this.maxrange;
+        number2 = this.maxrange;
+        score = 0;
 
     }
 
     @Override
     public void guess() {
-        if(number1 < 0)number1=maxrange;
-        if(number2 > maxrange)number2=maxrange;
+        if (number1 < 0) number1 = maxrange;
+        if (number2 > maxrange) number2 = maxrange;
         if (test) {
             --number1;
             number = number1;
         }
         if (!test) {
-            number =number2;
+            number = number2;
             ++number2;
         }
         test = !test;
@@ -41,18 +39,13 @@ public class SmartPlayer extends Player {
     }
 
     @Override
-    public String getName() {
-        return name;
+    public int getScore() {
+        return score;
     }
 
     @Override
-    public int getScore() {
-        return score;
-}
-
-    @Override
     public void addScorePoint() {
-     ++score;
+        ++score;
     }
 
 

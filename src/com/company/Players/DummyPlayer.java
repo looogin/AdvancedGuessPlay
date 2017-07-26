@@ -8,7 +8,7 @@ public class DummyPlayer extends Player {
     private int score;
 
     public DummyPlayer(int maxrange, String name) {
-        super(maxrange,name);
+        super(maxrange, name);
         this.name = name;
         this.maxrange = maxrange;
         score = 0;

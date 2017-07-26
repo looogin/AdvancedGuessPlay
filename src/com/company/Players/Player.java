@@ -1,11 +1,24 @@
 package com.company.Players;
 
-public interface Player {
+public abstract class Player {
 
 
-    void guess();
-    int getNumber();
-    String getName();
-    int getScore();
-    void addScorePoint();
+    private String name;
+
+
+    public Player(int maxRange, String name) {
+       this.name =name;
+    }
+
+    public abstract void guess();
+
+    public abstract int getNumber();
+
+    public String getName(){
+        return name;
+    }
+
+    public abstract int getScore();
+
+    abstract public void addScorePoint();
 }
