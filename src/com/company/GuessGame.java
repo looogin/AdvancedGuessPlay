@@ -18,13 +18,15 @@ public class GuessGame {
     public GuessGame() {
         createPlayer(20);
         createPlayer(100);
-
-
+        createPlayer(50);
+        createPlayer(20);
+        createPlayer(100);
+        createPlayer(50);
     }
 
     public void startGame() {
 
-        while (i < 100) {
+        while (i < 10000) {
             boolean win = false;
             System.out.println("Я загадываю число от 0 до " + maxNumber + " ...");
             int number = intargetNumber();

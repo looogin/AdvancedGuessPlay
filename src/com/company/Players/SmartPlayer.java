@@ -1,7 +1,8 @@
 package com.company.Players;
 
 public class SmartPlayer extends Player {
-    private final int maxrange;
+    private int maxrange;
+    private int iterator;
     private int number;
     private int number1;
     private int number2;
@@ -14,20 +15,23 @@ public class SmartPlayer extends Player {
         number1 = this.maxrange;
         number2 = this.maxrange;
         score = 0;
+        iterator = (int) (Math.random() * 1) + 2;
 
     }
 
     @Override
     public void guess() {
-        if (number1 < 0) number1 = maxrange;
-        if (number2 > maxrange) number2 = maxrange;
+        if (number1 <= 0) number1 = maxrange;
+        if (number2 >= maxrange * 2) number2 = maxrange;
         if (test) {
-            --number1;
             number = number1;
+            number1 = number1 - iterator;
+
         }
         if (!test) {
+            number2 = number2 + iterator;
             number = number2;
-            ++number2;
+
         }
         test = !test;
 
