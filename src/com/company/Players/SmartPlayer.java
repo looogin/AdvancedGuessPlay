@@ -1,6 +1,6 @@
 package com.company.Players;
 
-public class SmartPlayer implements Player {
+public class SmartPlayer extends Player {
     private final int maxrange;
     private final String name;
     private int number;
@@ -10,6 +10,7 @@ public class SmartPlayer implements Player {
     private int score;
 
     public SmartPlayer(int maxrange, String name) {
+      super(maxrange,name);
       this.name =name;
       this.maxrange = maxrange/2;
       number1 = this.maxrange;

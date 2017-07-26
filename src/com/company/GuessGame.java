@@ -4,6 +4,7 @@ import com.company.Players.DummyPlayer;
 import com.company.Players.NormalPlayer;
 import com.company.Players.Player;
 import com.company.Players.SmartPlayer;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,16 +49,16 @@ public class GuessGame {
 
         }
         System.out.print("Очки игроков:");
-        int last=0;
+        int last = 0;
         for (Player p : players) {
-            if(last<p.getScore()){
-                winPlayer=p.getName();
-                last=p.getScore();
+            if (last < p.getScore()) {
+                winPlayer = p.getName();
+                last = p.getScore();
             }
-            System.out.print(" "+p.getName()+": "+p.getScore()+"|");
+            System.out.print(" " + p.getName() + ": " + p.getScore() + "|");
         }
         System.out.println();
-        System.out.println("ПОБЕДИЛ "+winPlayer +" !!!!!!!!!!");
+        System.out.println("ПОБЕДИЛ " + winPlayer + " !!!!!!!!!!");
 
     }
 
