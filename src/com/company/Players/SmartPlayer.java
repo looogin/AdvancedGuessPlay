@@ -39,7 +39,7 @@ public class SmartPlayer extends Player {
 
     @Override
     public int getNumber() {
-        return number;
+        return (int) (number+Math.random());
     }
 
     @Override

@@ -15,7 +15,7 @@ public class NormalPlayer extends Player {
 
     @Override
     public void guess() {
-        number = (int) ((Math.random() * maxrange));
+        number = (int) ((Math.random() * maxrange)+Math.random());
     }
 
     @Override

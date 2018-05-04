@@ -26,8 +26,9 @@ public class GuessGame {
 
     public void startGame() {
 
-        while (i < 10000) {
+        while (i < 1000) {
             boolean win = false;
+            System.out.println(" *** Начинаем игру "+i+" раунда *** ");
             System.out.println("Я загадываю число от 0 до " + maxNumber + " ...");
             int number = intargetNumber();
             while (true) {
@@ -38,15 +39,17 @@ public class GuessGame {
                     if (p.getNumber() == number) {
                         System.out.println(p.getName() + " угадал ");
                         p.addScorePoint();
-                        System.out.println(" ***Конец игры*** ");
                         win = true;
-                        break;
+                        //break;
                     }
                 }
+
                 if (win) {
                     ++i;
+                    System.out.println(" ***Конец "+i+" раунда*** ");
                     break;
                 } else System.out.println("Игроки должны попробовать еще раз");
+
             }
 
         }
@@ -61,6 +64,7 @@ public class GuessGame {
         }
         System.out.println();
         System.out.println("ПОБЕДИЛ " + winPlayer + " !!!!!!!!!!");
+        System.out.println(" ***Конец игры*** ");
 
     }
 
